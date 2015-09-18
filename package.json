@@ -1,6 +1,6 @@
 {
   "name": "mdeps",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A module dependencies extractor",
   "main": "dist/index.js",
   "jsnext:main": "modules/index.js",

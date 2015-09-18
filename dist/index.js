@@ -17,10 +17,11 @@ function getDependencies(contents) {
     var opts = arguments.length <= 1 || arguments[1] === undefined ? defaultOpts : arguments[1];
 
     var ast = (0, _acorn.parse)(contents, { sourceType: 'module', ecmaVersion: opts.ecmaVersion });
+
     var deps = ast.body.map(extractDependenciesFromNode(opts)).reduce(function (dependencies, deps) {
         return dependencies.concat(deps);
     });
-    console.log(deps);
+
     return deps;
 }
 
@@ -52,8 +53,5 @@ function isModuleDependency(declaration) {
 
     if (name === 'require') return true;
 }
-
-getDependencies('import foo from "bar"', { ecmaVersion: 6 });
-getDependencies('var foo = require("bar");var foo2 = require("baz");');
 module.exports = exports['default'];
 
