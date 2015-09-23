@@ -1,3 +1,7 @@
+[![npm version](https://badge.fury.io/js/mresolve.svg)](http://badge.fury.io/js/mdeps)
+[![Build Status](https://travis-ci.org/troch/mresolve.svg)](https://travis-ci.org/troch/mdeps?branch=master)
+[![Coverage Status](https://coveralls.io/repos/troch/mresolve/badge.svg?branch=master&service=github)](https://coveralls.io/github/troch/mdeps?branch=master)
+
 # mdeps
 
 > A module dependency extractor
