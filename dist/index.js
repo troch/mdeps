@@ -1,12 +1,13 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
 var _acorn = require('acorn');
 
-exports['default'] = getDependencies;
+exports.default = getDependencies;
+
 
 var defaultOpts = {
     ecmaVersion: 5,
@@ -14,7 +15,7 @@ var defaultOpts = {
 };
 
 function getDependencies(contents) {
-    var opts = arguments.length <= 1 || arguments[1] === undefined ? defaultOpts : arguments[1];
+    var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultOpts;
 
     var ast = (0, _acorn.parse)(contents, { sourceType: 'module', ecmaVersion: opts.ecmaVersion });
 
